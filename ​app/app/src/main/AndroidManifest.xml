@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Needed to query and list installed apps on Android 11+ -->
+        <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+            <application
+                    android:allowBackup="true"
+                            android:icon="@android:drawable/ic_menu_search"
+                                    android:label="Spotlight"
+                                            android:roundIcon="@android:drawable/ic_menu_search"
+                                                    android:supportsRtl="true"
+                                                            android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+
+                                                                    <activity
+                                                                                android:name=".MainActivity"
+                                                                                            android:exported="true"
+                                                                                                        android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                                                                                                                    android:windowSoftInputMode="stateAlwaysVisible|adjustResize">
+                                                                                                                                
+                                                                                                                                            <!-- Standard App Launcher Intent -->
+                                                                                                                                                        <intent-filter>
+                                                                                                                                                                        <action android:name="android.intent.action.MAIN" />
+                                                                                                                                                                                        <category android:name="android.intent.category.LAUNCHER" />
+                                                                                                                                                                                                    </intent-filter>
+
+                                                                                                                                                                                                                <!-- Triggers when Hardware Assistant / Search Key is pressed -->
+                                                                                                                                                                                                                            <intent-filter>
+                                                                                                                                                                                                                                            <action android:name="android.intent.action.ASSIST" />
+                                                                                                                                                                                                                                                            <category android:name="android.intent.category.DEFAULT" />
+                                                                                                                                                                                                                                                                        </intent-filter>
+                                                                                                                                                                                                                                                                                </activity>
+                                                                                                                                                                                                                                                                                    </application>
+                                                                                                                                                                                                                                                                                    </manifest>
+                                                                                                                                                                                                                                                                                    
